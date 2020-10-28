@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'rsuite';
-import { render } from "react-dom";
+import 'rsuite/dist/styles/rsuite-default.css';
+
 
 const instance = (
     <Carousel autoplay className="custom-slider">
