@@ -1,6 +1,7 @@
 import './App.css';
 import NavbarMenu from './Components/Navbar';
 import Header from './Components/Header';
+import Cardbody from './Components/Cardbody';
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <NavbarMenu />
       <Header />
-      
+      <Cardbody />
     </div>
   );
 }
