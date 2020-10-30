@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './cardbody.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';

@@ -1,7 +1,8 @@
+.Carousel{
+    height: 75vh;
+}
 .imageCarousel{
+    object-fit: cover; 
     height: 75vh;
     width: 100%;
-    background-size: contain; 
-    /* background-repeat: no-repeat; 
-    object-fit: contain; */
 }
