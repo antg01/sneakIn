@@ -6,3 +6,7 @@
     height: 75vh;
     width: 100%;
 }
+.card{
+    display: inline-block;
+    margin: 5px;
+}
