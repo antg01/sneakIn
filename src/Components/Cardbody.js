@@ -4,11 +4,14 @@ import { Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './css.module.css';
 
+
+// const defaultImg = '/Users/macbook/workspace/react/sneak-in/src/Pics/default.jpg'
+
 function Cardbody({ sneakers }) {
   return(
     <div className={styles.card}>
       <Card style={{ width: '18rem'}}>
-      <Card.Img variant="top" src={sneakers.media.imageUrl} alt={sneakers.shoe} />
+      <Card.Img variant="top" src={sneakers.media.imageUrl} onError={(e)=>{e.target.onerror = null; e.target.src="/Users/macbook/workspace/react/sneak-in/src/Pics/default.jpg"}}  alt={sneakers.shoe} />
       <Card.Body>
     <Card.Title>{sneakers.title}</Card.Title>
       <Card.Text>

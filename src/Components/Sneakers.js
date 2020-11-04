@@ -1,9 +1,9 @@
-import NavbarMenu from './Components/Navbar';
+import React from 'react';
+import axios from 'axios';
+// import NavbarMenu from './Navbar';
 import Header from './Header';
 import Cardbody from './Cardbody';
-import axios from 'axios';
-import Header from './Components/Header';
-import Cardbody from './Components/Cardbody';
+
 
 class Sneakers extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Sneakers extends React.Component {
   render() {
     return (
       <div className='App'>
-        <NavbarMenu />
+        {/* <NavbarMenu /> */}
         <Header />
         <div>
           {this.state.sneakers && this.state.sneakers.map((sneakersData) => (
@@ -44,14 +44,5 @@ class Sneakers extends React.Component {
   }
 }
 
-// function Sneakers() {
-//     return (
-//     <div className="Sneakers">
-//         <Header />
-//       <Cardbody />
-//     </div>
-
-//     );
-// }
 
 export default Sneakers;
