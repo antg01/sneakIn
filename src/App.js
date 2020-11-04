@@ -1,7 +1,5 @@
+import React from 'react';
 import './App.css';
-import NavbarMenu from './Components/Navbar';
-import Header from './Components/Header';
-import Cardbody from './Components/Cardbody';
 import Sneakers from './Components/Sneakers.js'
 import FutureDrops from './Components/FutureDrops.js'
 import { Switch, Route, Link} from 'react-router-dom';
@@ -20,6 +18,17 @@ function App() {
       
     </div>
   );
-}
+
+
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <NavbarMenu />
+//       <Header />
+//       <Cardbody />
+//     </div>
+//   );
+// }
 
 export default App;
