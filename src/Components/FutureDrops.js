@@ -20,9 +20,10 @@ const ContainerStyle = {
   }
 
 
-function FutureDrops(){
+const FutureDrops = (props) => {
     return(
         <div style= {ContainerStyle}>
+            <h1></h1>
             <div style = {leftside}>
            <p> Bye Bye </p></div>
             <div style= {rightside}>
