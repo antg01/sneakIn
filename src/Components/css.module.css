@@ -10,3 +10,12 @@
     display: inline-block;
     margin: 5px;
 }
+.imgModal{
+    display: inline-block;
+    /* justify-content: center; */
+}
+.textModal{
+    display: inline-block;
+    /* justify-content: flex-start; */
+
+}
