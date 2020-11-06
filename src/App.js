@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <NavbarMenu/>
       <l><Link to='/'>Sneakers</Link></l>
-      <l><Link to='/FuturDrops'>FutureDrops</Link></l>
+      <l><Link to='/futuredrops'>FutureDrops</Link></l>
       <Switch>
         <Route exact path='/' component={Sneakers}/>
-        <Route path='/FutureDrops' component={FutureDrops}/>
+        <Route path='/futuredrops' component={FutureDrops}/>
       </Switch>
     </div>
   );
