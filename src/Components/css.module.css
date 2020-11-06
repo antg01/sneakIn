@@ -1,0 +1,21 @@
+.Carousel{
+    height: 75vh;
+}
+.imageCarousel{
+    object-fit: cover; 
+    height: 75vh;
+    width: 100%;
+}
+.card{
+    display: inline-block;
+    margin: 5px;
+}
+.imgModal{
+    display: inline-block;
+    /* justify-content: center; */
+}
+.textModal{
+    display: inline-block;
+    /* justify-content: flex-start; */
+
+}

@@ -1,16 +1,18 @@
 import React from 'react';
-import { Nav, Dropdown } from 'rsuite';
+import { Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 
 
-const styles = {
-  marginBottom: 0.1
+const styleNav = {
+  paddingTop: "15px",
+  paddingBottom: "15px",
+  marginBottom: "0.1",
 };
 
 const CustomNav = ({ active, onSelect, ...props }) => {
   return (
-    <Nav {...props} activeKey={active} onSelect={onSelect} style={styles}>
+    <Nav {...props} activeKey={active} onSelect={onSelect} style={styleNav}>
       <Nav.Item eventKey="home">
         Sneak In
       </Nav.Item>
