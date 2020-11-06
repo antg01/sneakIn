@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Dropdown } from 'rsuite';
+import { Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 
