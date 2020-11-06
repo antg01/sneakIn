@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Nav, Dropdown } from 'rsuite';
+import { Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 

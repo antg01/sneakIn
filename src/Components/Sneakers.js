@@ -17,16 +17,20 @@ class Sneakers extends React.Component {
       this.getSneakers()
     }
     getSneakers() {
-      // Send the request
-      axios.get('https://api.thesneakerdatabase.com/v1/sneakers?limit=32')
-        // Extract the DATA from the received response
+   
+      axios.get('https://api.thesneakerdatabase.com/v1/sneakers?limit=100')
+       
         .then(response => response.data)
-        // Use this data to update the state
+        
         .then(data => {
+
+          let filteredData = data.results.filter(item => item.media.imageUrl !== null)
+
+          // let filteredDataIncludes = data.results.filter(item => item.media.imageUrl.includes("default"))
+
           this.setState({
-            sneakers: data.results,
+            sneakers: filteredData
           });
-          console.log(data)
       });
     }
   render() {
