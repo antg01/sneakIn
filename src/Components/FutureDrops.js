@@ -48,10 +48,11 @@ const ContainerStyle = {
     width: '100px',
   }
 
-function FutureDrops(){
+const FutureDrops = (props) => {
     return(
       <>
         <div style= {ContainerStyle}>
+            <h1></h1>
             <div style = {leftside}>
                 <img style={imgstyle} src="https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>
            
