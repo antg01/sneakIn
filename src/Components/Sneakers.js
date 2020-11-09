@@ -24,10 +24,12 @@ class Sneakers extends React.Component {
         
         .then(data => {
 
-          let filteredData = data.results.filter(item => item.media.imageUrl !== null && !item.media.imageUrl.includes("Default.jpg"))
-
-          // let filteredDataIncludes = data.results.filter(item => item.media.imageUrl.includes("default"))
-
+          let filteredData = data.results.filter(item => item.media.imageUrl !== null 
+            && !item.media.imageUrl.includes("Default.jpg") 
+            && !item.title.includes("(GS)")
+            && !item.title.includes("(PS)")
+            && !item.title.includes("(TD)"))
+           
           this.setState({
             sneakers: filteredData
           });

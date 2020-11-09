@@ -11,7 +11,7 @@ function Cardbody({ sneakers }) {
 
   return (
     <div className={styles.card}>
-      <Card style={{ width: '14rem'}}>
+      <Card style={{ width: '17rem'}}>
       <Card.Img variant="top" src={sneakers.media.imageUrl} alt={sneakers.shoe} />
       <Card.Body>
     <Card.Title>{sneakers.title}</Card.Title>
