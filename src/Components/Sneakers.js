@@ -26,7 +26,9 @@ class Sneakers extends React.Component {
 
           let filteredData = data.results.filter(item => item.media.imageUrl !== null 
             && !item.media.imageUrl.includes("Default.jpg") 
-            && !item.title.includes("(GS)", "(PS)", "(TD)"))
+            && !item.title.includes("(GS)")
+            && !item.title.includes("(PS)")
+            && !item.title.includes("(TD)"))
            
           this.setState({
             sneakers: filteredData
