@@ -33,8 +33,8 @@
     float: left;
     width: 30%;
     height: 300px;
-    background: #ccc;
-    padding: 20px;
+    /* background: #ccc; */
+    /* padding: 20px; */
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -44,7 +44,7 @@
     flex-direction: column;
     align-items: center;
     float: left;
-    padding: 20px;
+    /* padding: 20px; */
     margin-top: 15px;
     margin-bottom: 15px;
     width: 70%;

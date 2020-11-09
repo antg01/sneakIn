@@ -14,7 +14,7 @@ const FutureDrops = (props) => {
         <Accordion>
                 <Card>
                     <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        <img className={styles.imgFuturDrops} src="https://static.sneakerjagers.com/news/nl/2020/06/adidas-Yeezy-Boost-380-Onyx-Release-Date-Price.png"/>
+                        <img className={styles.imgFuturDrops} src="https://sneakernews.com/wp-content/uploads/2020/09/adidas-yeezy-380-onyx-release-date-6.jpg?w=1140"/>
                     
                         <article className={styles.articleLayout}>
                             <h2 className={styles.textStyle}>adidas Yeezy Boost 380 Onyx</h2>
