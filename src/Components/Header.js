@@ -13,7 +13,7 @@ const head = (
             alt="shoes1"
         />
         <img className={styles.imageCarousel}
-           src="https://images.unsplash.com/photo-1597248881519-db089d3744a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+           src="https://images.unsplash.com/photo-1591550936261-4f22e48d1f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
              // src="https://stockx-360.imgix.net//Air-Jordan-1-Mid-Chicago-Toe/Images/Air-Jordan-1-Mid-Chicago-Toe/Lv2/img02.jpg?auto=format,compress&q=90&updated_at=1603481985&w=1000"
              alt="shoes2"
         />
@@ -23,7 +23,7 @@ const head = (
              alt="shoes3"
         />
         <img className={styles.imageCarousel}
-            src="https://images.unsplash.com/photo-1578116922645-3976907a7671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
+            src="https://images.unsplash.com/photo-1580977251970-221b2fa3f554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
              // src="https://stockx-360.imgix.net//Nike-Air-Rubber-Dunk-Off-White-UNC/Images/Nike-Air-Rubber-Dunk-Off-White-UNC/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1603756119&w=1000"
              alt="shoes4"
         />
