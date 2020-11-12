@@ -1,8 +1,10 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Nav } from 'rsuite';
+import { Content, Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
+import SearchBar from './SearchBar.js';
+import SneakInLogo from './SneakInLogo.png'
 
 
 
@@ -10,6 +12,7 @@ const styleNav = {
   paddingTop: "15px",
   paddingBottom: "15px",
   marginBottom: "0.1",
+  justifyContent: "space-between",
 };
 
 const CustomNav = withRouter(({ active, onSelect, ...props }) => {
@@ -47,10 +50,16 @@ class NavbarMenu extends React.Component {
     const { active } = this.state;
     return (
       <div>
+        <img src= {SneakInLogo} /> 
         <CustomNav appearance="subtle" active={active} onSelect={this.handleSelect} />
+        <SearchBar/>
+        
+
       </div>
     );
   }
 }
+
+
 
   export default NavbarMenu;
