@@ -1,29 +1,54 @@
+/* //////////NAV////////// */
+
+.nav {
+  text-align: center;
+}
+
+
 /* ///////HEADER/////// */
 
 .Carousel{
     height: 75vh;
+    margin-bottom: 5px;
 }
 .imageCarousel{
     object-fit: cover; 
     height: 75vh;
     width: 100%;
 }
-
+@media (max-width: 600px) {
+  .imageCarousel, .Carousel {
+    width: 100%;
+    height: auto;
+  }
+}
 
 /* ////////CARD-BODY///// */
 
 .card{
     display: inline-block;
+  
     margin: 5px;
+    text-align: center;
 }
 .imgModal{
-    display: inline-block;
+    display: flex;
     /* justify-content: center; */
 }
 .textModal{
-    display: inline-block;
+    display: flex;
     /* justify-content: flex-start; */
+}
+.btnAdd {
+  /* background-color: green; */
+  border-radius: 30px;
+  margin: 5px;
+}
 
+/* //////////Wish List//////// */ 
+
+.btnWishList {
+  margin: 5px;
 }
 
 /* ////////CSS-FUTURE-DROPS/////// */
