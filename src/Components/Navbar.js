@@ -1,8 +1,9 @@
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
+import styles from './css.module.css'
 
 
 
@@ -15,8 +16,6 @@ const styleNav = {
 const CustomNav = withRouter(({ active, onSelect, ...props }) => {
   function handleClick(e){
     e.preventDefault();
-    console.log(props.history);
-    console.log('I was clicked to',e.target.id);
     props.history.push(e.target.id)
   }
 
@@ -26,8 +25,8 @@ const CustomNav = withRouter(({ active, onSelect, ...props }) => {
       <Nav.Item eventKey="sneakers" id = "/" onClick={handleClick}>
         Sneak In
       </Nav.Item>
-      <Nav.Item eventKey="future-drops" id = "/future-drops" onClick={handleClick}> Future Drops</Nav.Item>
-      <Nav.Item eventKey="about-us" id = "/about-us" onClick={handleClick}> About Us</Nav.Item>
+      <Nav.Item eventKey="future-drops" id = "/future-drops" onClick={handleClick}>Future Drops</Nav.Item>
+      <Nav.Item eventKey="wish-list" id = "/wish-list" onClick={handleClick}>Wish list</Nav.Item>
     </Nav>
   );
 });
@@ -46,7 +45,7 @@ class NavbarMenu extends React.Component {
   render() {
     const { active } = this.state;
     return (
-      <div>
+      <div className={styles.nav}>
         <CustomNav appearance="subtle" active={active} onSelect={this.handleSelect} />
       </div>
     );

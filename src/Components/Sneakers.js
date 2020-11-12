@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from 'axios';
-// import NavbarMenu from './Navbar';
 import Header from './Header';
+import axios from 'axios';
 import Cardbody from './Cardbody';
+import styles from './css.module.css';
 
 
 class Sneakers extends React.Component {
@@ -36,9 +36,8 @@ class Sneakers extends React.Component {
       });
     }
   render() {
-    return (
-      <div className='App'>
-        {/* <NavbarMenu /> */}
+    return ( 
+      <div>
         <Header />
         <div>
           {this.state.sneakers && this.state.sneakers.map((sneakersData) => (
