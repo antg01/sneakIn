@@ -12,7 +12,7 @@ class App extends React.Component {
     state= {
       sneakers: [],
       favorites: [],
-      favorite: false,
+      // isActive: false,
   }; 
     getSneakers = () => {
    
@@ -40,10 +40,17 @@ class App extends React.Component {
         : [...prevState.favorites, sneaker]
     }));
   };
-  setFavorite = event => {
-    const newfavorite = !this.state.favorite;
-    this.setState({favorite: newfavorite});
-  };
+  // setActive = event => {
+  //   const newActive = !this.state.isActive;
+  //   this.setState({isActive: newActive});
+  // };
+  filterShoes = (text) => {
+    const filtered = this.state.sneakers.filter((sneakers) => sneakers.brand.includes(text))
+    this.setState({
+      sneakers: filtered
+    })
+    console.log(text)
+  }
   // twoFunc = () => {
   //   this.handleToggle();
   //   this.setFavorite()
@@ -51,7 +58,7 @@ class App extends React.Component {
     render () {
       return (
         <div className="App">
-          <NavbarMenu/>  
+          <NavbarMenu filterShoes={this.filterShoes} />  
           <Switch>
             <Route 
                 exact 
@@ -63,8 +70,8 @@ class App extends React.Component {
                             getSneakers={this.getSneakers} 
                             // twoFunc={this.twoFunc}
                             handleToggle={this.handleToggle}
-                            favorite={this.state.favorite}
-                            setFavorite={this.setFavorite}
+                            isActive={this.state.isActive}
+                            setActive={this.setActive}
                           />)} 
             />
 

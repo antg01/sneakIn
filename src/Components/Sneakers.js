@@ -11,7 +11,7 @@ class Sneakers extends React.Component {
     }
     
   render() {
-    const { sneakers, handleToggle, favorite, setFavorite, twoFunc } = this.props; 
+    const { sneakers, handleToggle, setActive, isActive} = this.props; 
     return ( 
       <div>
         <Header />
@@ -20,10 +20,9 @@ class Sneakers extends React.Component {
             <Cardbody 
             sneaker={sneaker} 
             key={`${sneaker.id}-movie`}
-            // twoFunc={twoFunc}
             handleToggle={handleToggle}
-            // favorite={favorite}
-            setFavorite={setFavorite}
+           
+            setActive={setActive}
             />
           ))}
         </div>
