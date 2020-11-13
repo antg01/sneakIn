@@ -9,7 +9,6 @@ class Cardbody extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-          favorite: false,
           show : false,
       };
     }
@@ -19,28 +18,25 @@ class Cardbody extends React.Component {
       hideModal = () => {
         this.setState({ show: false });
       };
-      setFavorite = event => {
-          const newfavorite = !this.state.favorite;
-          this.setState({favorite: newfavorite});
-      };
+
       
     
     render (){
-      const { sneakers } = this.props;
+      const { sneaker, handleToggle, favorite, setFavorite } = this.props;
 
       return (
         
         <div className={styles.card}>
           <Card style={{ width: '17rem'}}>
-          <Card.Img variant="top" src={sneakers.media.imageUrl} alt={sneakers.shoe} />
+          <Card.Img variant="top" src={sneaker.media.imageUrl} alt={sneaker.shoe} />
           <Card.Body>
-        <Card.Title>{sneakers.title}</Card.Title>
+        <Card.Title>{sneaker.title}</Card.Title>
           <Card.Text>
-          Price: {sneakers.retailPrice}{' '} $
+          Price: {sneaker.retailPrice}{' '} $
           
           </Card.Text>
           <Button variant="outline-primary" onClick={this.showModal}>See Now</Button>
-          <Button className={styles.btnAdd} variant={this.state.favorite? "success" : "outline-success"} onClick={this.setFavorite}>Add</Button>
+          <Button className={styles.btnAdd} variant={favorite? "success" : "outline-success"} onClick={() =>{ handleToggle(sneaker); setFavorite()}}>Add</Button>
           </Card.Body>
           </Card>
 
@@ -56,20 +52,20 @@ class Cardbody extends React.Component {
           >
             <Modal.Header closeButton>
               <Modal.Title id="example-custom-modal-styling-title">
-              {sneakers.title}
+              {sneaker.title}
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <img src={sneakers.media.smallImageUrl} alt="" />
+              <img src={sneaker.media.smallImageUrl} alt="" />
               <ListGroup>
-                <ListGroup.Item>Color: {sneakers.colorway}{' '}</ListGroup.Item>
-                <ListGroup.Item>Year: {sneakers.year}{' '}</ListGroup.Item>
-                <ListGroup.Item>Gender: {sneakers.gender}{' '}</ListGroup.Item> 
-                <ListGroup.Item>Release date: {sneakers.releaseDate}{' '}</ListGroup.Item>
-                <ListGroup.Item>Price: {sneakers.retailPrice}{' '} $</ListGroup.Item>
+                <ListGroup.Item>Color: {sneaker.colorway}{' '}</ListGroup.Item>
+                <ListGroup.Item>Year: {sneaker.year}{' '}</ListGroup.Item>
+                <ListGroup.Item>Gender: {sneaker.gender}{' '}</ListGroup.Item> 
+                <ListGroup.Item>Release date: {sneaker.releaseDate}{' '}</ListGroup.Item>
+                <ListGroup.Item>Price: {sneaker.retailPrice}{' '} $</ListGroup.Item>
               </ListGroup>
             </Modal.Body>
-            <Button className={styles.btnAdd} variant="success">Add to wish list</Button>
+            <Button className={styles.btnAdd} onClick={() => handleToggle(sneaker)} variant="success">Add to wish list</Button>
           </Modal>
           </div>
         
