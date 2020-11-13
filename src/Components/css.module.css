@@ -1,21 +1,100 @@
+/* //////////NAV////////// */
+
+.nav {
+  text-align: center;
+}
+
+
+/* ///////HEADER/////// */
+
 .Carousel{
     height: 75vh;
+    margin-bottom: 5px;
 }
 .imageCarousel{
     object-fit: cover; 
     height: 75vh;
     width: 100%;
 }
+@media (max-width: 600px) {
+  .imageCarousel, .Carousel {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ////////CARD-BODY///// */
+
 .card{
     display: inline-block;
+  
     margin: 5px;
+    text-align: center;
 }
 .imgModal{
-    display: inline-block;
+    display: flex;
     /* justify-content: center; */
 }
 .textModal{
-    display: inline-block;
+    display: flex;
     /* justify-content: flex-start; */
-
 }
+.btnAdd {
+  /* background-color: green; */
+  border-radius: 30px;
+  margin: 5px;
+}
+
+/* //////////Wish List//////// */ 
+
+.btnWishList {
+  margin: 5px;
+}
+
+/* ////////CSS-FUTURE-DROPS/////// */
+
+.imgFuturDrops {
+    object-fit: cover;
+    float: left;
+    width: 30%;
+    height: 300px;
+    /* background: #ccc; */
+    /* padding: 20px; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+.articleLayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    /* padding: 20px; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; 
+  }
+  .textStyle {
+      color: black;
+     text-align: center;
+
+  }
+  .imgInsta {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 1200px) {
+    .imgFuturDrops, .articleLayout {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+@media (max-width: 600px) {
+    .imgFuturDrops, .articleLayout {
+      width: 100%;
+      height: auto;
+    }
+  }

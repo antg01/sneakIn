@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from 'axios';
-// import NavbarMenu from './Navbar';
 import Header from './Header';
+import axios from 'axios';
 import Cardbody from './Cardbody';
+import styles from './css.module.css';
 
 
 class Sneakers extends React.Component {
@@ -24,19 +24,20 @@ class Sneakers extends React.Component {
         
         .then(data => {
 
-          let filteredData = data.results.filter(item => item.media.imageUrl !== null && !item.media.imageUrl.includes("Default.jpg"))
-
-          // let filteredDataIncludes = data.results.filter(item => item.media.imageUrl.includes("default"))
-
+          let filteredData = data.results.filter(item => item.media.imageUrl !== null 
+            && !item.media.imageUrl.includes("Default.jpg") 
+            && !item.title.includes("(GS)")
+            && !item.title.includes("(PS)")
+            && !item.title.includes("(TD)"))
+           
           this.setState({
             sneakers: filteredData
           });
       });
     }
   render() {
-    return (
-      <div className='App'>
-        {/* <NavbarMenu /> */}
+    return ( 
+      <div>
         <Header />
         <div>
           {this.state.sneakers && this.state.sneakers.map((sneakersData) => (
