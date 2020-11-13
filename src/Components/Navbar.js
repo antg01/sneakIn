@@ -44,7 +44,7 @@ const CustomNav = withRouter(({ active, onSelect, ...props }) => {
         Sneak In
       </Nav.Item>
       <Nav.Item eventKey="future-drops" id = "/future-drops" onClick={handleClick}>Future Drops</Nav.Item>
-      <Nav.Item eventKey="wish-list" id = "/wish-list" onClick={handleClick}>Wish list</Nav.Item>
+      <Nav.Item eventKey="wish-list" id = "/wish-list" onClick={handleClick}>Wish List</Nav.Item>
     </Nav>
   );
 });
