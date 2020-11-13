@@ -10,6 +10,7 @@ class Cardbody extends React.Component {
       super(props);
       this.state = {
           show : false,
+          isActive: false,
       };
     }
       showModal = () => {
@@ -18,11 +19,15 @@ class Cardbody extends React.Component {
       hideModal = () => {
         this.setState({ show: false });
       };
+      setActive = event => {
+        const newActive = !this.state.isActive;
+        this.setState({isActive: newActive});
+      };
 
       
     
     render (){
-      const { sneaker, handleToggle, favorite, setFavorite } = this.props;
+      const { sneaker, handleToggle, isActive, setActive } = this.props;
 
       return (
         
@@ -36,7 +41,7 @@ class Cardbody extends React.Component {
           
           </Card.Text>
           <Button variant="outline-primary" onClick={this.showModal}>See Now</Button>
-          <Button className={styles.btnAdd} variant={favorite? "success" : "outline-success"} onClick={() =>{ handleToggle(sneaker); setFavorite()}}>Add</Button>
+          <Button className={styles.btnAdd} variant={this.state.isActive? "success" : "outline-success"} onClick={() =>{ handleToggle(sneaker); this.setActive()}}>Add</Button>
           </Card.Body>
           </Card>
 

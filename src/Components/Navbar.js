@@ -71,7 +71,7 @@ class NavbarMenu extends React.Component {
           <CustomNav appearance="subtle" active={active} onSelect={this.handleSelect} />
         </div>
         <div style = {rightNav}>
-          <SearchBar/>
+          <SearchBar filterShoes={this.props.filterShoes} />
         </div>
       </div>
     );
