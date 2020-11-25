@@ -3,6 +3,12 @@ import styles from './css.module.css';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion'
 import { Card } from 'react-bootstrap';
+import goat from './goat.png';
+import stadiumgoods from './stadiumgoods.png';
+import stockx from './stock x.png';
+import Flightclub from './Flightclub.png';
+import klekt from './klekt.png';
+
 
 
 
@@ -28,11 +34,21 @@ const FutureDrops = (props) => {
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
+                        <a href= 'https://stockx.com/adidas-yeezy-boost-380-onyx' >
+                        <img className={styles.imgInsta} src= {stockx} alt="" />
+                        </a>
+                        <a href='https://www.goat.com/sneakers/yeezy-boost-380-onyx-non-reflective-yzy-380-onyx'>
+                        <img className={styles.imgInsta} src= {goat} alt="" />
+                        </a>
+                        <a href= 'https://www.stadiumgoods.com/adidas-yeezy-boost-380-onyx-fz1270'>
+                        <img className={styles.imgInsta} src={stadiumgoods} alt="" />
+                        </a>
+                        <a href = 'https://www.flightclub.com/yeezy-boost-380-onyx-non-reflective-yzy-380-onyx'>
+                        <img className={styles.imgInsta} src= {Flightclub} alt="" />
+                        </a>s
+                        <a href= 'https://blog.klekt.com/yeezy/the-adidas-yeezy-boost-380-onyx-reflective-is-finally-almost-here/'>
+                        <img className={styles.imgInsta} src= {klekt} alt="" />
+                        </a>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -56,11 +72,21 @@ const FutureDrops = (props) => {
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
+                        <a href= 'https://stockx.com/nike-sb-dunk-low-frame-skate-habibi'>
+                    <img className={styles.imgInsta} src= {stockx} alt="" />
+                    </a>
+                    <a href=  'https://www.goat.com/'>
+                        <img className={styles.imgInsta} src= {goat} alt="" />
+                        </a>
+                        <a href='https://www.stadiumgoods.com/'>
+                        <img className={styles.imgInsta} src={stadiumgoods} alt="" />
+                        </a>
+                        <a href='https://www.flightclub.com/'>
+                        <img className={styles.imgInsta} src= {Flightclub} alt="" />
+                        </a>
+                       <a href = 'https://blog.klekt.com/nike/a-frame-skate-x-nike-sb-dunk-low-collaboration-is-in-the-works/'>
+                        <img className={styles.imgInsta} src= {klekt} alt="" />
+                        </a>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -84,11 +110,21 @@ const FutureDrops = (props) => {
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
+                       <a href='https://stockx.com/'>
+                    <img className={styles.imgInsta} src= {stockx} alt="" />
+                    </a>
+                    <a href= 'https://www.goat.com/'>
+                        <img className={styles.imgInsta} src= {goat} alt="" />
+                        </a>
+                        <a href = 'https://www.stadiumgoods.com/'>
+                        <img className={styles.imgInsta} src={stadiumgoods} alt="" />
+                        </a>
+                       <a href= 'https://www.flightclub.com/'>
+                        <img className={styles.imgInsta} src= {Flightclub} alt="" />
+                        </a>
+                        <a href='https://blog.klekt.com/yeezy/a-yeezy-quantum-in-frozen-blue-has-been-revealed/'>
+                        <img className={styles.imgInsta} src= {klekt} alt="" />
+                        </a>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -111,11 +147,21 @@ const FutureDrops = (props) => {
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
+                        <a href='https://stockx.com/air-jordan-1-retro-high-silver-toe-w'>
+                    <img className={styles.imgInsta} src= {stockx} alt="" />
+                    </a>
+                    <a href='https://www.goat.com/'>
+                        <img className={styles.imgInsta} src= {goat} alt="" />
+                        </a>
+                        <a href= 'https://www.stadiumgoods.com/'>
+                        <img className={styles.imgInsta} src={stadiumgoods} alt="" />
+                        </a>
+                        <a href='https://www.flightclub.com/'>
+                        <img className={styles.imgInsta} src= {Flightclub} alt="" />
+                        </a>
+                        <a href='https://blog.klekt.com/jordan/your-best-look-yet-at-the-air-jordan-1-high-wmns-silver-toe/'>
+                        <img className={styles.imgInsta} src= {klekt}alt="" />
+                        </a>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -136,11 +182,21 @@ const FutureDrops = (props) => {
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
-                        <img className={styles.imgInsta} src="https://via.placeholder.com/200" alt="" />
+                        <a href='https://stockx.com/nike-dunk-low-cactus-plant-flea-market-swarovski'>
+                    <img className={styles.imgInsta} src= {stockx} alt="" />
+                    </a>
+                    <a href='https://www.goat.com/'>
+                        <img className={styles.imgInsta} src= {goat} alt="" />
+                        </a>
+                        <a href='https://www.stadiumgoods.com/'>
+                        <img className={styles.imgInsta} src={stadiumgoods} alt="" />
+                        </a>
+                        <a href='https://www.flightclub.com/'>
+                        <img className={styles.imgInsta} src= {Flightclub} alt="" />
+                        </a>
+                        <a href='https://blog.klekt.com/nike/cactus-plant-flea-market-x-nike-dunk-collaboration-will-release-next-week/'>
+                        <img className={styles.imgInsta} src= {klekt}alt="" />
+                        </a>
                     </Card.Body>
                     </Accordion.Collapse>
                 </Card>

@@ -4,10 +4,16 @@ import { Card, Container } from 'react-bootstrap';
 import styles from './css.module.css';
 
 
+const cardstyle = {
+    border: "3px"
 
+}
 const WishList = ({ favorites }) => {
     return(
-        <div className={styles.WishList}>
+
+        <div> 
+            <h1> wish list </h1>
+        <div  className={styles.WishList}>
         
             {favorites.map((sneaker) => (
                 <Card style={{ width: '10rem'}}>
@@ -25,6 +31,7 @@ const WishList = ({ favorites }) => {
             ))}
            
         </div>
+    </div>
     )
           
 }

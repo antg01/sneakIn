@@ -4,8 +4,8 @@ import { withRouter } from 'react-router';
 import { Content, Nav, Row } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import SearchBar from './SearchBar.js';
-import SneakInLogo from './SneakInLogo.png'
-import styles from './css.module.css'
+import SneakInLogo from './SneakInLogo.png';
+import styles from './css.module.css';
 
 
 
