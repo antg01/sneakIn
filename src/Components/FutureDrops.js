@@ -177,7 +177,7 @@ const FutureDrops = (props) => {
                             <h2 className={styles.textStyle}>Cactus Plant flea Market x Nike Dunk Low Swarovski</h2>
                             <h4 className={styles.textStyle}>La nouvelle collaboration Cactus Plant Flea Market x Nike Dunk Low Swarovski fera ses débuts officiels au mois de novembre.</h4>
                             <p className={styles.textStyle}>Pour l'occasion, la créatrice et fondatrice de la marque CPFM, Cynthia Lu, a recouvert la classique Nike Dunk Low de gros cristaux Swarovski façon boule à facettes. On remarque également que le swoosh est oversize, rappelant ainsi la CPFM Nike Blazer, tandis que la languette dispose d'un rembourrage comme pour les déclinaisons SB. Une touche de couleur sur les semelles intérieures ainsi que les lettres L (Left) et R (Right) complètent le design.</p>
-                            <Button variant="dark" href="https://www.lesitedelasneaker.com/release/air-jordan-1-high-og-university-blue-555088-134/">Link to article</Button>{' '}
+                            <Button variant="dark" href="https://www.lesitedelasneaker.com/release/cactus-plant-flea-market-nike-dunk-low-swarovski/">Link to article</Button>{' '}
                         </article>
                         </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
