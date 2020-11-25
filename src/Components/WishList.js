@@ -7,10 +7,11 @@ import styles from './css.module.css';
 
 const WishList = ({ favorites }) => {
     return(
-        <div className={styles.WishList}>
+        <div>
         
             {favorites.map((sneaker) => (
-                <Card style={{ width: '10rem'}}>
+                <a className={styles.WishList} href={`https://stockx.com/search?s=${sneaker.title}`} target="_blank" rel="noreferrer noopener">
+                <Card>
                 <Card.Img variant="top" src={sneaker.media.imageUrl} alt={sneaker.shoe} />
                 <Card.Body>
                 <Card.Title>{sneaker.title}</Card.Title>
@@ -18,10 +19,9 @@ const WishList = ({ favorites }) => {
                 Price: {sneaker.retailPrice}{' '} $
             
                 </Card.Text>
-                {/* <Button variant="outline-primary" onClick={this.showModal}>See Now</Button> */}
-                {/* <Button className={styles.btnAdd} variant={this.state.favorite? "success" : "outline-success"} onClick={() =>{ handleToggle(sneaker); this.setFavorite()}}>Add</Button> */}
                 </Card.Body>
                 </Card>
+                </a>
             ))}
            
         </div>

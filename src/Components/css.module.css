@@ -46,13 +46,40 @@
 }
 
 /* //////////Wish List//////// */ 
+/* .divWish {
+  display: inline-block;
+} */
 
 .WishList {
-  display: flex; 
-  flex-direction: row;
-  
+  display: inline-block; 
   margin: 20px;
   text-align: center;
+  width: 14rem;
+  color: black;
+  text-decoration: none !important;
+}
+
+.WishList:hover {
+    
+  -webkit-animation:scale 0.3s linear;
+  -moz-animation:scale 0.3s linear;
+  animation:scale 0.3s linear;
+  transform: scale(1.1);
+  animation-fill-mode: forwards;
+  position:initial;
+  z-index:111;
+
+}
+@keyframes scale{
+  0%{
+    transform:scale(1.0);
+  }
+  100%{
+       transform:scale(1.1);
+       -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+      -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+      box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+  }
 }
 
 /* ////////CSS-FUTURE-DROPS/////// */

@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from 'react-bootstrap';
 import styles from './css.module.css';
 import Modal from 'react-bootstrap/Modal';
-import ListGroup from 'react-bootstrap/ListGroup'
+import ListGroup from 'react-bootstrap/ListGroup';
+import { Container } from 'react-bootstrap';
 
 class Cardbody extends React.Component {
     constructor(props) {
@@ -30,7 +31,6 @@ class Cardbody extends React.Component {
       const { sneaker, handleToggle, isActive, setActive } = this.props;
 
       return (
-        
         <div className={styles.card}>
           <Card style={{ width: '17rem'}}>
           <Card.Img variant="top" src={sneaker.media.imageUrl} alt={sneaker.shoe} />
