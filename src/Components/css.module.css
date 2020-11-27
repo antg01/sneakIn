@@ -114,6 +114,10 @@
   }
   .imgInsta {
     margin-right: 10px;
+    border: 1px solid black;
+    width: 200px;
+    height: 15vh;
+    margin-left: 30px;
   }
 
   @media (max-width: 1200px) {
