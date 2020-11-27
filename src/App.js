@@ -12,6 +12,7 @@ class App extends React.Component {
     state= {
       sneakers: [],
       favorites: [],
+      currentSearch: "",
       // isActive: false,
   }; 
     getSneakers = () => {
@@ -44,18 +45,29 @@ class App extends React.Component {
   //   const newActive = !this.state.isActive;
   //   this.setState({isActive: newActive});
   // };
-  filterShoes = (text) => {
-    const filtered = this.state.sneakers.filter((sneakers) => sneakers.brand.includes(text))
+  filterList = () => {
+      const filtered = this.state.sneakers.filter((sneaker) => {
+        const textInLowerCase = this.state.currentSearch.toLowerCase()
+        const titleInLowerCase = sneaker.title.toLowerCase()
+        return titleInLowerCase.includes(textInLowerCase)
+      })
+      return filtered
+  }
+  filterShoes = (text) => { 
     this.setState({
-      sneakers: filtered
+     currentSearch: text  
     })
-    console.log(text)
+    
   }
   // twoFunc = () => {
   //   this.handleToggle();
   //   this.setFavorite()
   // }
     render () {
+      let {sneakers} = this.state
+      if (this.state.currentSearch != "" ){
+        sneakers = this.filterList()
+      }
       return (
         <div className="App">
           <NavbarMenu filterShoes={this.filterShoes} />  
@@ -66,7 +78,7 @@ class App extends React.Component {
                 render={(props) => ( 
                           <Sneakers 
                             {...props} 
-                            sneakers={this.state.sneakers}
+                            sneakers={sneakers}
                             getSneakers={this.getSneakers} 
                             // twoFunc={this.twoFunc}
                             handleToggle={this.handleToggle}

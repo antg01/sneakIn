@@ -45,7 +45,7 @@ const FutureDrops = (props) => {
                         </a>
                         <a href = 'https://www.flightclub.com/yeezy-boost-380-onyx-non-reflective-yzy-380-onyx'>
                         <img className={styles.imgInsta} src= {Flightclub} alt="" />
-                        </a>s
+                        </a>
                         <a href= 'https://blog.klekt.com/yeezy/the-adidas-yeezy-boost-380-onyx-reflective-is-finally-almost-here/'>
                         <img className={styles.imgInsta} src= {klekt} alt="" />
                         </a>

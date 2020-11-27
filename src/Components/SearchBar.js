@@ -17,6 +17,7 @@ class SearchBar extends React.Component {
     }
     
     handleSubmit = (event) => {
+      console.log("j'ai été submité")
         // alert('A name was submitted: ' + this.state.value);
 
         this.props.filterShoes(this.state.value);
