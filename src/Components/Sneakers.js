@@ -1,17 +1,15 @@
-import React from 'react';
+import React from 'react'; 
+
+//local import 
+import SneakerContext from "../Contexts/SneakerContext";
 import Header from './Header';
 import Cardbody from './Cardbody';
 
 
-
-class Sneakers extends React.Component {
-
-    componentDidMount() {
-      this.props.getSneakers()
-    }
+const Sneakers = () => {
     
-  render() {
-    const { sneakers, handleToggle, setActive, isActive} = this.props; 
+  const { sneakers } = React.useContext(SneakerContext);
+
     return ( 
       <div>
         <Header />
@@ -19,17 +17,12 @@ class Sneakers extends React.Component {
           {sneakers.map((sneaker) => (
             <Cardbody 
             sneaker={sneaker} 
-            key={`${sneaker.id}-movie`}
-            handleToggle={handleToggle}
-           
-            setActive={setActive}
+            key={`sneaker - ${sneaker.id}`}
             />
           ))}
         </div>
       </div>
     );
-  }
 }
-
 
 export default Sneakers;

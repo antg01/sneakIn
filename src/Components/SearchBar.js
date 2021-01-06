@@ -1,7 +1,7 @@
 import React from 'react';
 import 'rsuite/dist/styles/rsuite-default.css';
 import { Input } from 'rsuite';
-import { InputGroup, Button } from 'rsuite';
+import { InputGroup } from 'rsuite';
 import { Icon } from 'rsuite';
 
 
@@ -17,8 +17,7 @@ class SearchBar extends React.Component {
     }
     
     handleSubmit = (event) => {
-      console.log("j'ai été submité")
-        // alert('A name was submitted: ' + this.state.value);
+      console.log("j'ai été submité " + this.state.value);
 
         this.props.filterShoes(this.state.value);
         event.preventDefault();
@@ -40,13 +39,7 @@ class SearchBar extends React.Component {
             </div>
           </form>
         );
-      }
     }
-
-
-
-
-  
-
+}
 
   export default SearchBar;

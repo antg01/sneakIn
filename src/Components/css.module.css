@@ -1,21 +1,20 @@
 /* //////////NAV////////// */
-
 .nav {
   text-align: center;
 }
 
-
 /* ///////HEADER/////// */
-
 .Carousel{
-    height: 75vh;
-    margin-bottom: 5px;
+  height: 75vh;
+  margin-bottom: 5px;
 }
+
 .imageCarousel{
-    object-fit: cover; 
-    height: 75vh;
-    width: 100%;
+  object-fit: cover; 
+  height: 75vh;
+  width: 100%;
 }
+
 @media (max-width: 600px) {
   .imageCarousel, .Carousel {
     width: 100%;
@@ -24,32 +23,30 @@
 }
 
 /* ////////CARD-BODY///// */
-
 .card{
-    display: inline-block; 
-  
-    margin: 5px;
-    text-align: center;
+  display: inline-block; 
+  margin: 5px;
+  text-align: center;
 }
+
 .imgModal{
-    display: flex;
-    /* justify-content: center; */
+  display: flex;
 }
+
 .textModal{
-    display: flex;
-    /* justify-content: flex-start; */
+  display: flex;
 }
+
 .btnAdd {
-  /* background-color: green; */
-  /* border-radius: 30px; */
   margin: 5px;
 }
 
-/* //////////Wish List//////// */ 
-/* .divWish {
-  display: inline-block;
-} */
+.zoomed-image {
+  background-size: cover;
+  cursor: pointer;
+}
 
+/* //////////Wish List//////// */ 
 .WishList {
   display: inline-block; 
   margin: 20px;
@@ -60,7 +57,6 @@
 }
 
 .WishList:hover {
-    
   -webkit-animation:scale 0.3s linear;
   -moz-animation:scale 0.3s linear;
   animation:scale 0.3s linear;
@@ -68,68 +64,75 @@
   animation-fill-mode: forwards;
   position:initial;
   z-index:111;
-
 }
+
 @keyframes scale{
   0%{
     transform:scale(1.0);
   }
   100%{
-       transform:scale(1.1);
-       -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
+      transform:scale(1.1);
+      -webkit-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
       -moz-box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
       box-shadow: 10px 10px 60px 10px rgba(0,0,0,0.1);
   }
 }
+.textWishList {
+  display: flex;
+  flex-direction: column;
+}
+.smallTextWishList {
+  color: gray;
+  text-align: center;
+  position: absolute;                  
+  bottom:0;                          
+}
 
 /* ////////CSS-FUTURE-DROPS/////// */
-
 .imgFuturDrops {
-    object-fit: cover;
-    float: left;
-    width: 30%;
-    height: 300px;
-    /* background: #ccc; */
-    /* padding: 20px; */
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+  object-fit: cover;
+  float: left;
+  width: 30%;
+  height: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
   
 .articleLayout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    float: left;
-    /* padding: 20px; */
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 70%;
-    background-color: #f1f1f1;
-    height: 300px; 
-  }
-  .textStyle {
-      color: black;
-     text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; 
+}
 
-  }
-  .imgInsta {
-    margin-right: 10px;
-    border: 1px solid black;
-    width: 200px;
-    height: 15vh;
-    margin-left: 30px;
-  }
+.textStyle {
+  color: black;
+  text-align: center;
+}
 
-  @media (max-width: 1200px) {
+.imgInsta {
+  margin-right: 10px;
+  border: 1px solid black;
+  width: 200px;
+  height: 15vh;
+  margin-left: 30px;
+}
+
+@media (max-width: 1200px) {
     .imgFuturDrops, .articleLayout {
       width: 100%;
       height: auto;
     }
-  }
+}
 
 @media (max-width: 600px) {
     .imgFuturDrops, .articleLayout {
       width: 100%;
       height: auto;
     }
-  }
+}

@@ -1,11 +1,14 @@
 // import { render } from '@testing-library/react';
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Content, Nav, Row } from 'rsuite';
+import {  Link } from "react-router-dom";
+import { Nav } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
-import SearchBar from './SearchBar.js';
-import SneakInLogo from './SneakInLogo.png';
+
+//local import 
 import styles from './css.module.css';
+import SearchBar from './SearchBar.js';
+import SneakInLogo from '../Pics/SneakInLogo.png';
 
 
 
@@ -40,7 +43,7 @@ const CustomNav = withRouter(({ active, onSelect, ...props }) => {
   return(
 
     <Nav {...props} activeKey={active} onSelect={onSelect} style={styleNav}>
-      <Nav.Item eventKey="sneakers" id = "/" onClick={handleClick}>
+      <Nav.Item eventKey="sneakers" id = "/" onClick={handleClick} home>
         Sneak In
       </Nav.Item>
       <Nav.Item eventKey="future-drops" id = "/future-drops" onClick={handleClick}>Future Drops</Nav.Item>
@@ -65,9 +68,11 @@ class NavbarMenu extends React.Component {
     return (
       <div style = {navContainer} >
         <div style = {leftNav} >
-          <img style= {sneakInLogoStyle} src= {SneakInLogo}/> 
+          <Link to="/">
+            <img style= {sneakInLogoStyle} src= {SneakInLogo} alt='logo'/> 
+          </Link>
         </div>
-        <div style = {middleNav}className={styles.nav}>
+        <div style = {middleNav} className={styles.nav}>
           <CustomNav appearance="subtle" active={active} onSelect={this.handleSelect} />
         </div>
         <div style = {rightNav}>

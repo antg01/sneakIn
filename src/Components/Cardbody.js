@@ -1,59 +1,50 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card } from 'react-bootstrap';
-import styles from './css.module.css';
 import Modal from 'react-bootstrap/Modal';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { Container } from 'react-bootstrap';
+import ContentZoom from 'react-content-zoom';
 
-class Cardbody extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-          show : false,
-          isActive: false,
-      };
-    }
-      showModal = () => {
-        this.setState({ show: true });
-      };
-      hideModal = () => {
-        this.setState({ show: false });
-      };
-      setActive = event => {
-        const newActive = !this.state.isActive;
-        this.setState({isActive: newActive});
-      };
+//local import
+import styles from './css.module.css';
+import SneakerContext from "../Contexts/SneakerContext";
+import { useLocalStorage } from './useLocalStorage';
 
-      
-    
-    render (){
-      const { sneaker, handleToggle, isActive, setActive } = this.props;
+const Cardbody = ({ sneaker }) => {
+
+  const [show, setShow] = useState(false);
+  const { handleToggle } = React.useContext(SneakerContext);
+
+  const useLocalState = (localItem) => {
+    const [local, setState] = useState(localStorage.getItem(localItem));
+      const setLocal = (newItem) => {
+        localStorage.setItem(localItem, newItem);
+        setState(newItem);
+      }
+    return [local, setLocal];
+  }
+
+  const [active, setActive] = useLocalState([]);
 
       return (
         <div className={styles.card}>
-          <Card style={{ width: '17rem'}}>
-          <Card.Img variant="top" src={sneaker.media.imageUrl} alt={sneaker.shoe} />
-          <Card.Body>
-        <Card.Title>{sneaker.title}</Card.Title>
-          <Card.Text>
-          Price: {sneaker.retailPrice}{' '} $
-          
-          </Card.Text>
-          <Button variant="outline-primary" onClick={this.showModal}>See Now</Button>
-          <Button className={styles.btnAdd} variant={this.state.isActive? "success" : "outline-success"} onClick={() =>{ handleToggle(sneaker); this.setActive()}}>Add</Button>
-          </Card.Body>
+          <Card style={{ width: '17rem', height: '24rem'}}>
+            <Card.Img variant="top" src={sneaker.media.imageUrl} alt={sneaker.shoe} />
+            <Card.Body>
+              <Card.Title>{sneaker.title}</Card.Title>
+              <Card.Text>Price: {sneaker.retailPrice}{' '} $</Card.Text>
+            <Button variant="outline-primary" onClick={() => setShow(true)}>See Now</Button>
+            <Button className={styles.btnAdd} variant={active? "danger" : "outline-success"} onClick={() =>{ handleToggle(sneaker); setActive(prevstate => !prevstate)}}>{active? 'Remove' : 'Add'}</Button>
+            </Card.Body>
           </Card>
 
-
           <Modal
-            show={this.state.show}
-            onHide={this.hideModal}
-            style={{opacity:1}}
-            size="lg"
-            // dialogClassName="modal-90w"
-            aria-labelledby="example-custom-modal-styling-title"
-            centered
+              show={show}
+              onHide={() => setShow(false)}
+              style={{opacity:1}}
+              size="lg"
+              aria-labelledby="example-custom-modal-styling-title"
+              centered
           >
             <Modal.Header closeButton>
               <Modal.Title id="example-custom-modal-styling-title">
@@ -61,22 +52,26 @@ class Cardbody extends React.Component {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <img src={sneaker.media.smallImageUrl} alt="" />
+              <ContentZoom 
+                        zoomPercent={200}
+                        largeImageUrl={sneaker.media.smallImageUrl}
+                        imageUrl={sneaker.media.smallImageUrl}
+                        contentHeight={400}
+                        contentWidth={600} />
               <ListGroup>
-                <ListGroup.Item>Color: {sneaker.colorway}{' '}</ListGroup.Item>
-                <ListGroup.Item>Year: {sneaker.year}{' '}</ListGroup.Item>
-                <ListGroup.Item>Gender: {sneaker.gender}{' '}</ListGroup.Item> 
-                <ListGroup.Item>Release date: {sneaker.releaseDate}{' '}</ListGroup.Item>
-                <ListGroup.Item>Price: {sneaker.retailPrice}{' '} $</ListGroup.Item>
+                <ListGroup.Item><u>Color</u>: {sneaker.colorway}{' '}</ListGroup.Item>
+                <ListGroup.Item><u>Year</u>: {sneaker.year}{' '}</ListGroup.Item>
+                <ListGroup.Item><u>Gender</u>: {sneaker.gender}{' '}</ListGroup.Item> 
+                <ListGroup.Item><u>Release date</u>: {sneaker.releaseDate}{' '}</ListGroup.Item>
+                <ListGroup.Item><u>Price</u>: {sneaker.retailPrice}{' '} $</ListGroup.Item>
               </ListGroup>
             </Modal.Body>
-            <Button className={styles.btnAdd} onClick={() => handleToggle(sneaker)} variant="success">Add to wish list</Button>
+            <Button className={styles.btnAdd} onClick={() =>{ handleToggle(sneaker); setActive(prevstate => !prevstate)}} variant={active? "danger" : "success"}>{active? "Remove from wish list" : "Add to wish list"}</Button>
           </Modal>
           </div>
         
       );
-    };
-}
+};
 
 
 export default Cardbody;

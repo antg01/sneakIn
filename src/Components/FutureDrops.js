@@ -3,11 +3,11 @@ import styles from './css.module.css';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion'
 import { Card } from 'react-bootstrap';
-import goat from './goat.png';
-import stadiumgoods from './stadiumgoods.png';
-import stockx from './stock x.png';
-import Flightclub from './Flightclub.png';
-import klekt from './klekt.png';
+import goat from '../Pics/goat.png';
+import stadiumgoods from '../Pics/stadiumgoods.png';
+import stockx from '../Pics/stock x.png';
+import Flightclub from '../Pics/Flightclub.png';
+import klekt from '../Pics/klekt.png';
 
 
 
