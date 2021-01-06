@@ -24,7 +24,7 @@ const Cardbody = ({ sneaker }) => {
     return [local, setLocal];
   }
 
-  const [active, setActive] = useLocalState([]);
+  const [active, setActive] = useState('');
 
       return (
         <div className={styles.card}>
