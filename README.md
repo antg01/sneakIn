@@ -1,5 +1,7 @@
 #SneakIn
 
+A web app for Sneaker aficionados that display current data from an API
+
 launch App - npm start
 
 API used - https://api.thesneakerdatabase.com/v1/sneakers?limit=100
