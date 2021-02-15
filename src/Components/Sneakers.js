@@ -8,7 +8,7 @@ import Cardbody from './Cardbody';
 
 const Sneakers = () => {
     
-  const { sneakers } = React.useContext(SneakerContext);
+  const { sneakers, favorites } = React.useContext(SneakerContext);
 
     return ( 
       <div>
@@ -17,6 +17,7 @@ const Sneakers = () => {
           {sneakers.map((sneaker) => (
             <Cardbody 
             sneaker={sneaker} 
+            isFavorite={favorites.includes(sneaker)}
             key={`sneaker - ${sneaker.id}`}
             />
           ))}

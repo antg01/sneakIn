@@ -8,23 +8,23 @@ import ContentZoom from 'react-content-zoom';
 //local import
 import styles from './css.module.css';
 import SneakerContext from "../Contexts/SneakerContext";
-import { useLocalStorage } from './useLocalStorage';
+// import { useLocalStorage } from './useLocalStorage';
 
-const Cardbody = ({ sneaker }) => {
+const Cardbody = ({ sneaker, isFavorite }) => {
 
   const [show, setShow] = useState(false);
-  const { handleToggle } = React.useContext(SneakerContext);
+  const { handleToggle, setActive, isActive } = React.useContext(SneakerContext);
 
-  const useLocalState = (localItem) => {
-    const [local, setState] = useState(localStorage.getItem(localItem));
-      const setLocal = (newItem) => {
-        localStorage.setItem(localItem, newItem);
-        setState(newItem);
-      }
-    return [local, setLocal];
-  }
+  // const useLocalState = (localItem) => {
+  //   const [local, setState] = useState(localStorage.getItem(localItem));
+  //     const setLocal = (newItem) => {
+  //       localStorage.setItem(localItem, newItem);
+  //       setState(newItem);
+  //     }
+  //   return [local, setLocal];
+  // }
 
-  const [active, setActive] = useState('');
+  // const [active, setActive] = useState(''); setActive(prevstate => !prevstate)
 
       return (
         <div className={styles.card}>
@@ -34,12 +34,12 @@ const Cardbody = ({ sneaker }) => {
               <Card.Title>{sneaker.title}</Card.Title>
               <Card.Text>Price: {sneaker.retailPrice}{' '} $</Card.Text>
             <Button variant="outline-primary" onClick={() => setShow(true)}>See Now</Button>
-            <Button className={styles.btnAdd} variant={active? "danger" : "outline-success"} onClick={() =>{ handleToggle(sneaker); setActive(prevstate => !prevstate)}}>{active? 'Remove' : 'Add'}</Button>
+            <Button className={styles.btnAdd} variant={isFavorite? "danger" : "outline-success"} onClick={(e) =>{ handleToggle(sneaker) }}>{isFavorite? 'Remove' : 'Add'}</Button>
             </Card.Body>
           </Card>
 
           <Modal
-              show={show}
+              show={show} 
               onHide={() => setShow(false)}
               style={{opacity:1}}
               size="lg"
@@ -66,7 +66,7 @@ const Cardbody = ({ sneaker }) => {
                 <ListGroup.Item><u>Price</u>: {sneaker.retailPrice}{' '} $</ListGroup.Item>
               </ListGroup>
             </Modal.Body>
-            <Button className={styles.btnAdd} onClick={() =>{ handleToggle(sneaker); setActive(prevstate => !prevstate)}} variant={active? "danger" : "success"}>{active? "Remove from wish list" : "Add to wish list"}</Button>
+            <Button className={styles.btnAdd} onClick={(e) =>{ handleToggle(sneaker) }} variant={isFavorite? "danger" : "success"}>{isFavorite? "Remove from wish list" : "Add to wish list"}</Button>
           </Modal>
           </div>
         

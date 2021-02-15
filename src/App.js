@@ -16,6 +16,7 @@ class App extends React.Component {
       sneakers: [],
       favorites: [],
       currentSearch: "",
+      isActive: false
     }; 
 
   getSneakers = () => {
@@ -44,6 +45,11 @@ class App extends React.Component {
         : [...prevState.favorites, sneaker]
     }));
   };
+
+  setActive = (id) => {
+    const newActive = !this.state.isActive;
+    this.setState({isActive: newActive});
+  };
   
   filterList = () => {
       const filtered = this.state.sneakers.filter((sneaker) => {
@@ -69,8 +75,11 @@ class App extends React.Component {
         <div className="App">
           <SneakerContext.Provider 
               value={{ 
-                sneakers: this.state.sneakers, 
+                sneakers: this.state.sneakers,
+                // isActive: this.state.isActive,
+                // setActive: this.setActive, 
                 handleToggle: this.handleToggle, 
+                favorites: this.state.favorites
               }}>
           <NavbarMenu filterShoes={this.filterShoes} />  
           <Switch>
